@@ -23,7 +23,7 @@ body{
 .teacher {
   border: 1;
   background-color: rgb(201, 88, 214);
-  padding: 14px 28px;
+  padding: 10px;
   font-size: 2em;
   cursor: pointer;
   display: inline-block;
@@ -31,7 +31,7 @@ body{
   margin: auto;
   width: 50%;
   padding: 10px;
-  height:150px;
+  /*height:150px;*/
   position: relative;
 }
 
@@ -41,15 +41,14 @@ body{
 .student {
   border: 1;
   background-color: rgb(149, 170, 245);
-  padding: 14px 28px;
+  padding: 10px;
   font-size: 2em;
   cursor: pointer;
   display: inline-block;
   border-radius: 10px;
   margin: auto;
   width: 50%;
-  padding: 10px;
-  height:150px;
+  /*height:;*/
   position: relative;
 }
 
