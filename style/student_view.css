@@ -1,0 +1,51 @@
+/* CSS Selectors go here */
+
+h1 {
+  display: block;
+  font-size: 6em;
+  text-align: center;
+  font-weight: initial;
+  border-radius: 10px;
+  border: 3px solid black;
+  background-color: rgb(159, 79, 219);
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+body{
+  height: 100vh;
+  width: 100wh;
+  background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/11/space-fog-planets-desktop-wallpaper-preview.jpg');
+
+}
+
+.teacher {
+  border: 1px solid black; 
+  background-color: rgb(201, 88, 214); 
+  padding: 10px;
+  font-size: 2em;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 20%;
+  margin: 10px auto;
+  text-align: center; 
+  display: block; 
+}
+
+.teacher:hover {background: #a3ff9c;}
+
+.student {
+  border: 1px solid black; 
+  background-color: rgb(149, 170, 245); 
+  padding: 10px;
+  font-size: 2em;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 20%;
+  margin:100px auto 50px auto;
+  text-align: center; 
+  display: block; 
+}
+
+.student:hover {background: #a3ff9c;}
