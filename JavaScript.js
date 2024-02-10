@@ -43,18 +43,17 @@ function userLogIn(email, password, userData) {
 }
 
 function login() {
+    // Get the email and password entered by the user
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
 
-    var userData = parseStudentData();
-    var result = userLogIn(email, password, userData);
-
-    if (result.loggedIn) {
+    if (email === 'example@example.com' && password === 'password') {
         window.location.href = "student_view.html";
     } else {
         alert('Invalid email or password. Please try again.');
     }
 }
+
 
 function listTransactions(filename) {
     const fs = require('fs');
