@@ -10,11 +10,11 @@ class UserData {
 
 function parseStudentData() {
     const fs = require('fs');
-    let fileContent = fs.readFileSync("logins", 'utf8');
+    let fileContent = fs.readFileSync("logins.txt", 'utf8');
     let lines = fileContent.split('\n');
     let parsed = [];
 
-    for (let i = 1; i < lines.length; i++) {
+    for (let i = 1; i < lines.length; i++) { 
         let line = lines[i].trim();
         if (line) {
             let parts = line.split(/\s+/);
@@ -31,23 +31,16 @@ function studentList(userData) {
     return userData.map(data => ({ name: data.name, balance: data.balance }));
 }
 
-function userLogIn(email, password, userData) {
-    let name = '';
-    for (const data of userData) {
-        if (data.email === email && data.password === password) {
-            name = data.name;
-            return { loggedIn: true, name };
-        }
-    }
-    return { loggedIn: false, name };
-}
 
 function login() {
-    // Get the email and password entered by the user
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
 
-    if (email === 'example@example.com' && password === 'password') {
+    var userData = parseStudentData();
+
+    var loggedInUser = userData.find(user => user.email === email && user.password === password);
+
+    if (loggedInUser) {
         window.location.href = "student_view.html";
     } else {
         alert('Invalid email or password. Please try again.');
