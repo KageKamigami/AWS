@@ -1,3 +1,4 @@
+/* CSS Selectors go here */
 
 h1 {
   display: block;
@@ -16,4 +17,35 @@ body{
   height: 100vh;
   width: 100wh;
   background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/11/space-fog-planets-desktop-wallpaper-preview.jpg');
+}
+
+label {
+  display: inline-block;
+}
+
+.email {
+  border-radius: 10px;
+  border: 3px solid black;
+  background-color: rgb(201, 88, 214);
+}
+
+.password {
+  border-radius: 10px;
+  border: 3px solid black;
+  background-color: rgb(149, 170, 245);
+}
+
+input {
+  color: white;
+  border: 3px solid black;
+  background: white;
+  width: 150px; 
+}
+
+#email {
+  width: calc(100% - 160px);
+}
+
+#password {
+  width: calc(100% - 160px); 
 }
