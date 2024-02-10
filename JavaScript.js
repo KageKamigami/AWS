@@ -42,8 +42,8 @@ function login() {
 
     // Check the result of the login attempt
     if (result.loggedIn) {
-        // If login is successful, do something (e.g., redirect to another page)
-        alert('Welcome, ' + result.name + '!');
+        // If login is successful, redirect to the student_view.html page
+        window.location.href = "student_view.html";
     } else {
         // If login fails, display an error message
         alert('Invalid email or password. Please try again.');
