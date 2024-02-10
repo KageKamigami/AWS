@@ -4,7 +4,7 @@ function login() {
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
 
-    if (email === 'example@example.com' && password === 'password') {
+    if (email === 'ale@gmail.com' && password === 'meowsss') {
         window.location.href = "student_view.html";
     } else {
         alert('Invalid email or password. Please try again.');
