@@ -21,18 +21,15 @@ body{
 }
 
 .teacher {
-  border: 1;
-  background-color: rgb(201, 88, 214);
+  border: 1px solid black; 
+  background-color: rgb(201, 88, 214); 
   padding: 10px;
   font-size: 2em;
   cursor: pointer;
-  display: inline-block;
   border-radius: 10px;
-  /*margin: auto;*/
   width: 50%;
-  padding: 10px;
-  height:50%;
-  position: center;
+  margin: 10px;
+  text-align: center; 
 }
 
 /* On mouse-over */
