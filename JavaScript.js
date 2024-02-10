@@ -14,18 +14,16 @@ function parseStudentData() {
     let lines = fileContent.split('\n');
     let parsed = [];
 
-    for (let i = 1; i < lines.length; i++) { 
-        let line = lines[i].trim();
-        if (line) {
-            let parts = line.split(/\s+/);
-            if (parts.length >= 5) {
-                let data = new UserData(parts[0], parts[1], parts[2], parseInt(parts[3]), parts[4]);
-                parsed.push(data);
-            }
+    for (let line of lines) {
+        let parts = line.trim().split(/\s+/);
+        if (parts.length >= 5) {
+            let data = new UserData(parts[0], parts[1], parts[2], parseInt(parts[3]), parts[4]);
+            parsed.push(data);
         }
     }
     return parsed;
 }
+
 
 function studentList(userData) {
     return userData.map(data => ({ name: data.name, balance: data.balance }));
