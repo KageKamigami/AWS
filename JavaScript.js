@@ -50,15 +50,29 @@ function login() {
     }
 }
 
-function userLogIn(email, password, userData) {
-    let name = '';
-    for (const data of userData) {
-        if (data.email === email && data.password === password) {
-            name = data.name;
-            return { loggedIn: true, name };
+function userLogIn(email, password) {
+    // Read the content of the user data file
+    const fs = require('fs');
+    let fileContent = fs.readFileSync('logins.txt', 'utf8');
+    let lines = fileContent.split('\n');
+
+    // Iterate through each line to find a match
+    for (let line of lines) {
+        let userData = line.split(' ');
+        let userEmail = userData[0];
+        let userPassword = userData[1];
+        let userName = userData[2];
+        let userBalance = parseInt(userData[3]);
+        let userCdoe = userData[4];
+
+        // Check if email and password match
+        if (userEmail === email && userPassword === password) {
+            return { loggedIn: true, name: userName, balance: userBalance };
         }
     }
-    return { loggedIn: false, name };
+
+    // If no match found, return false
+    return { loggedIn: false };
 }
 
 function listTransactions(filename) {
