@@ -8,9 +8,9 @@ class UserData {
     }
 }
 
-function parseStudentData(filename) {
+function parseStudentData() {
     const fs = require('fs');
-    let fileContent = fs.readFileSync(filename, 'utf8');
+    let fileContent = fs.readFileSync("logins", 'utf8');
     let lines = fileContent.split('\n');
     let parsed = [];
 
@@ -31,52 +31,29 @@ function studentList(userData) {
     return userData.map(data => ({ name: data.name, balance: data.balance }));
 }
 
-
-function login_page() {
-    window.location.href = "login.html";
+function userLogIn(email, password, userData) {
+    let name = '';
+    for (const data of userData) {
+        if (data.email === email && data.password === password) {
+            name = data.name;
+            return { loggedIn: true, name };
+        }
+    }
+    return { loggedIn: false, name };
 }
 
 function login() {
-    // Get the email and password entered by the user
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
 
-    // Call the userLogIn function with the provided email and password
-    var result = userLogIn(email, password);
+    var userData = parseStudentData();
+    var result = userLogIn(email, password, userData);
 
-    // Check the result of the login attempt
     if (result.loggedIn) {
-        // If login is successful, redirect to the student_view.html page
         window.location.href = "student_view.html";
     } else {
-        // If login fails, display an error message
         alert('Invalid email or password. Please try again.');
     }
-}
-
-function userLogIn(email, password) {
-    // Read the content of the user data file
-    const fs = require('fs');
-    let fileContent = fs.readFileSync('logins.txt', 'utf8');
-    let lines = fileContent.split('\n');
-
-    // Iterate through each line to find a match
-    for (let line of lines) {
-        let userData = line.split(' ');
-        let userEmail = userData[0];
-        let userPassword = userData[1];
-        let userName = userData[2];
-        let userBalance = parseInt(userData[3]);
-        let userCode = userData[4];
-
-        // Check if email and password match
-        if (userEmail === email && userPassword === password) {
-            return { loggedIn: true, name: userName, balance: userBalance };
-        }
-    }
-
-    // If no match found, return false
-    return { loggedIn: false };
 }
 
 function listTransactions(filename) {
