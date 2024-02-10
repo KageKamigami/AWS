@@ -32,6 +32,10 @@ function studentList(userData) {
 }
 
 
+function login_page() {
+    window.location.href = "login.html";
+}
+
 function login() {
     // Get the email and password entered by the user
     var email = document.getElementById('email').value;
@@ -63,7 +67,7 @@ function userLogIn(email, password) {
         let userPassword = userData[1];
         let userName = userData[2];
         let userBalance = parseInt(userData[3]);
-        let userCdoe = userData[4];
+        let userCode = userData[4];
 
         // Check if email and password match
         if (userEmail === email && userPassword === password) {
