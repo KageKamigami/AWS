@@ -13,14 +13,20 @@ h1 {
   padding: 10px;
 }
 
-body{
+body {
   height: 100vh;
   width: 100wh;
   background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/11/space-fog-planets-desktop-wallpaper-preview.jpg');
 }
 
+.form-group {
+  margin-bottom: 30px; 
+}
+
 label {
   display: inline-block;
+  width: 100px;
+  margin-right: 20px; 
 }
 
 .email {
@@ -39,13 +45,5 @@ input {
   color: white;
   border: 3px solid black;
   background: white;
-  width: 150px; 
-}
-
-#email {
-  width: calc(100% - 160px);
-}
-
-#password {
-  width: calc(100% - 160px); 
+  width: calc(100% - 130px); 
 }
