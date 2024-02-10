@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./style/welcome.css">
+</head>
+<body>
+
+<h1>Incentivize</h1>
+
+<button class="student" onclick="studentPage()">Student <br> Login</button>
+<button class="teacher" onclick="teacherPage()">Teacher <br> Login</button>
+<script>
+    function studentPage() {
+        window.location.href = "yes.html";
+    }
+    function teacherPage() {
+        window.location.href = "yes.html";
+    }
+</script> 
+
+</body>
+</html>
