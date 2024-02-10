@@ -1,78 +1,57 @@
-/* Reset some default styles for better consistency */
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-  }
-  
- 
-  body {
-    background-image: url('sampleimage.jpg'); /* add a background here */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Arial', sans-serif;
-    color: #fff; /* text color */
-  }
-  
-  /* Style the header with a space-themed title */
-  header {
-    text-align: center;
-    padding: 50px 0;
-  }
-  
-  h1 {
-    font-size: 3em;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  }
-  
+/* CSS Selectors go here */
 
+h1 {
+  display: block;
+  font-size: 6em;
+  text-align: center;
+  font-weight: initial;
+  width: 555px;
+  height: 100px;
+  border-radius: 100px;
+  border: 3px solid black;
+  background-color: rgb(234, 180, 234);
+  padding: 10px;
+  margin: 10px;
+}
 
-  main { /* where the main content is located */
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  }
-  
-  h2 {
-    color: #ffd700; 
-    margin-bottom: 15px;
-  }
-  
-  p {
-    line-height: 1.6;
-  }
-  
-  /* Style links to stand out */
-  a {
-    color: #00bfff; /* Set a light blue color for links */
-    text-decoration: none;
-    border-bottom: 2px solid #ffd700; /* Add a gold underline on hover */
-    transition: border-bottom 0.3s ease-in-out;
-  }
-  
-  a:hover {
-    border-bottom: 2px solid #00bfff; /* Change underline color on hover */
-  }
-  
-  /* Style a button for call-to-action */
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background: #00bfff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-  }
-  
-  .button:hover {
-    background: #ffd700;
-  }
-  
+body{
+  height: 100vh;
+  width: 100wh;
+  background-color: rgb(253, 243, 151);
+}
+
+.teacher {
+  border: 1;
+  background-color: rgb(255, 164, 164);
+  padding: 14px 28px;
+  font-size: 2em;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 100px;
+  top: 15%;
+  right: 2%;
+  width:200px;
+  height:150px;
+  position: relative;
+}
+
+/* On mouse-over */
+.teacher:hover {background: #a3ff9c;}
+
+.student {
+  border: 1;
+  background-color: rgb(138, 159, 236);
+  padding: 14px 28px;
+  font-size: 2em;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 100px;
+  top: 45%;
+  left: 33%;
+  width:200px;
+  height:150px;
+  position: relative;
+}
+
+/* On mouse-over */
+.student:hover {background: #a3ff9c;}
