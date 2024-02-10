@@ -21,18 +21,18 @@ body{
 }
 
 .teacher {
-  border: 1px solid black; 
+    border: 1px solid black; 
   background-color: rgb(201, 88, 214); 
   padding: 10px;
   font-size: 2em;
   cursor: pointer;
   border-radius: 10px;
   width: 50%;
-  margin: 10px;
+  margin: 10px auto;
   text-align: center; 
+  display: block; 
 }
 
-/* On mouse-over */
 .teacher:hover {background: #a3ff9c;}
 
 .student {
@@ -43,9 +43,9 @@ body{
   cursor: pointer;
   border-radius: 10px;
   width: 50%;
-  margin: 10px;
+  margin: 10px auto;
   text-align: center; 
+  display: block; 
 }
 
-/* On mouse-over */
 .student:hover {background: #a3ff9c;}
